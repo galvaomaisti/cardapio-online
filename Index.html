@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="./src/icone.png" type="image/png">
+  <link rel="apple-touch-icon" href="./src/icone.png">
+
+  <title>Dev Burguer | Cardápio Online</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<div class="video-bg">
+  <video autoplay muted loop playsinline>
+    <source src="./src/VideoHamburger2.mp4" type="video/mp4">
+  </video>
+</div>
+
+<header class="container-text">
+  <img src="./src/icone.png" class="logo">
+  <h1>"AL' Toque"</h1>
+  <p>
+    Mais que hambúrguer, uma experiência saborosa!
+  </p>
+</header>
+
+<nav class="container-buttons">
+  <button onclick="filterCategory('all')">Todos</button>
+  <button onclick="filterCategory('hamburgers')">Hambúrgueres</button>
+  <button onclick="filterCategory('porcoes')">Porções</button>
+  <button onclick="filterCategory('bebidas')">Bebidas</button>
+</nav>
+
+<ul id="product-list"></ul>
+
+<button class="checkout-fab" onclick="toggleCheckout()">
+  <img src="./src/whats.png" class="whats-icon">
+  <span id="cart-count" class="cart-badge">0</span>
+</button>
+
+<div class="cart hidden" id="checkout">
+  <h2>Carrinho</h2>
+
+  <ul id="cart-items"></ul>
+
+  <input id="client-name" placeholder="Seu nome">
+
+  <select id="neighborhood">
+    <option value="">Selecione seu bairro</option>
+    <option value="Centro">Centro</option>
+    <option value="Jardim América">Jardim América</option>
+    <option value="Vila Nova">Vila Nova</option>
+    <option value="Jardim das Flores">Jardim das Flores</option>
+    <option value="Outros">Outros</option>
+  </select>
+
+  <input id="client-address" placeholder="Rua, número e complemento">
+
+  <label>Pagamento</label>
+  <select id="payment">
+    <option>Dinheiro</option>
+    <option>Pix</option>
+    <option>Cartão</option>
+  </select>
+
+  <p id="delivery-fee">Entrega: R$ 0,00</p>
+  <p>Total: <span id="total">R$ 0,00</span></p>
+
+  <button class="checkout-send" onclick="checkout()">Enviar pedido</button>
+</div>
+
+<div class="toast" id="toast">Item adicionado ao carrinho</div>
+<div class="toast closed" id="closed-toast">Estamos fechados no momento</div>
+
+<script src="./products.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
