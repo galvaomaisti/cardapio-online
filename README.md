@@ -1,4 +1,4 @@
-# 🍔 A' Toque Burguer | Cardápio Online
+# 🍔 "AL' Toque Burguer" | Cardápio Online
 
 Projeto de cardápio online moderno e responsivo para hamburgueria, desenvolvido com HTML, CSS e JavaScript puro, focado em experiência mobile, vendas rápidas e checkout via WhatsApp.
 
