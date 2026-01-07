@@ -28,8 +28,8 @@ const deliveryFees = {
   "Iguacu-2": 10,
   "Greenfield": 11,
   "Jardim-Brasil": 11,
-  "jardim-Italia": 11,
-  "jardim-Santarem": 12,
+  "Jardim-Italia": 11,
+  "Jardim-Santarem": 12,
   "Parque-Industrial": 12
 }
 
@@ -244,4 +244,5 @@ function showToast() {
 renderProducts(menuOptions)
 renderCart()
 neighborhoodSelect.addEventListener("change", renderCart)
+
 
