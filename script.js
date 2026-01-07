@@ -10,12 +10,27 @@ const totalSpan = document.getElementById("total")
 const neighborhoodSelect = document.getElementById("neighborhood")
 const cartCount = document.getElementById("cart-count")
 
+/* =========================
+   FRETE POR BAIRRO
+   Fazenda Rio Grande PR
+========================= */
+
 const deliveryFees = {
   "Centro": 5,
-  "Jardim América": 7,
-  "Vila Nova": 8,
-  "Jardim das Flores": 10,
-  "Outros": 12
+  "Eucaliptos": 7,
+  "Gralha-Azul": 7,
+  "Nacoes": 8,
+  "Pioneiros": 8,
+  "Santa-Terezinha": 9,
+  "Estados": 9,
+  "Veneza": 10,
+  "Iguacu-1": 10,
+  "Iguacu-2": 10,
+  "Greenfield": 11,
+  "Jardim-Brasil": 11,
+  "jardim-Italia": 11,
+  "jardim-Santarem": 12,
+  "Parque-Industrial": 12
 }
 
 const currency = new Intl.NumberFormat("pt-BR", {
@@ -229,3 +244,4 @@ function showToast() {
 renderProducts(menuOptions)
 renderCart()
 neighborhoodSelect.addEventListener("change", renderCart)
+
